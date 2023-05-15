@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Items: {{ items | length }} </title>
+</head>
+<body>
+<p>Here is a list of your items:</p>
+<ul>
+    {% for item in items %}
+        <li>{{ item }}</li>
+    {% endfor %}
+</ul>
+<p>Add more with this shiny form:</p>
+<form action="/items" method="post">
+    <input type="text" name="item">
+    <input type="submit" value="Add Item">
+</form>
+</body>
+</html>
